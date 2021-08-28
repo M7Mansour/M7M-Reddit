@@ -209,11 +209,13 @@ input {
     min-width: 0px;
 }
 
-.user-light:hover {
+.user-light:hover,
+.user-light.active {
     border-bottom: 1px solid rgb(24, 144, 255);
 }
 
-.user-light:hover .username-light {
+.user-light:hover .username-light,
+.username-light.active {
     color: rgb(24, 144, 255);
 }
 
@@ -229,6 +231,17 @@ input {
 }
 
 .logout-light {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(129, 142, 153);
+}
+
+.logout-container-light {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -247,8 +260,14 @@ input {
     border-bottom: 1px solid transparent;
 }
 
-.logout-light:hover {
+.logout-container-light:hover,
+.logout-container-light.active {
     border-bottom: 1px solid rgb(24, 144, 255);
+    color: rgb(24, 144, 255);
+}
+
+.logout-container-light:hover .logout-light,
+.logout-light.active {
     color: rgb(24, 144, 255);
 }
 
@@ -633,7 +652,7 @@ input {
     margin: 0px auto;
     border: 1px solid rgb(235, 237, 240);
     border-radius: 2px;
-    max-width: 375px;
+    max-width: 500px;
     padding: 24px;
     background-color: rgb(255, 255, 255);
 }
@@ -652,7 +671,7 @@ input {
 }
 
 .login-form-label-light {
-    font-size: 12px;
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     display: block;
@@ -670,7 +689,7 @@ input {
     width: 100%;
     padding: 8px;
     background-color: rgb(252, 252, 252);
-    font-size: 15px;
+    font-size: 30px;
     color: rgb(69, 79, 91);
     appearance: none;
     outline: none;
@@ -952,11 +971,13 @@ input {
     min-width: 0px;
 }
 
-.user-dark:hover {
+.user-dark:hover,
+.user-dark.active {
     border-bottom: 1px solid rgb(51, 160, 255);
 }
 
-.user-dark:hover .username-dark {
+.user-dark:hover .username-dark,
+.username-dark.active {
     color: rgb(51, 160, 255);
 }
 
@@ -972,6 +993,17 @@ input {
 }
 
 .logout-dark {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(176, 184, 191);
+}
+
+.logout-container-dark {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -990,9 +1022,15 @@ input {
     border-bottom: 1px solid transparent;
 }
 
-.logout-dark:hover {
-    border-bottom: 1px solid rgb(51, 160, 255);
-    color: rgb(51, 160, 255);
+.logout-container-dark:hover,
+.logout-container-dark.active {
+    border-bottom: 1px solid rgb(51, 144, 255);
+    color: rgb(51, 144, 255);
+}
+
+.logout-container-dark:hover .logout-dark,
+.logout-dark.active {
+    color: rgb(51, 144, 255);
 }
 
 .home-wrapper-dark {
@@ -1366,7 +1404,7 @@ input {
     margin: 0px auto;
     border: 1px solid rgb(51, 51, 51);
     border-radius: 2px;
-    max-width: 375px;
+    max-width: 500px;
     padding: 24px;
     background-color: rgb(38, 38, 38);
 }
@@ -1385,7 +1423,7 @@ input {
 }
 
 .login-form-label-dark {
-    font-size: 12px;
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     display: block;
@@ -1403,7 +1441,7 @@ input {
     width: 100%;
     padding: 8px;
     background-color: rgb(33, 33, 33);
-    font-size: 15px;
+    font-size: 30px;
     color: rgb(255, 255, 255);
     appearance: none;
     outline: none;

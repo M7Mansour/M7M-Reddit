@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M7M-Reddit</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 
 <body>
@@ -22,83 +22,44 @@
                 </svg>
             </span>
             <a class="user-light" href="/u/M7Mansour">
-                <span class="username-light">M7Mansour</span>
+                <span class="username-light">log in</span>
             </a>
-            <a class="logout-container-light" href="/u/M7Mansour">
-                <span class="logout-light">log out</span>
+            <a class="logout-container-light active" href="/u/M7Mansour">
+                <span class="logout-light active">sign up</span>
             </a>
         </header>
+        <div class="login-form-wrapper-light">
+            <form class="login-form-light">
+                <div class="login-username-light">
+                    <label class="login-form-label-light">username</label>
+                    <input name="username" type="text" placeholder="username" autocomplete="off" class="login-form-input-light" value="">
+                </div>
+                <div class="login-username-light">
+                    <label class="login-form-label-light">first name</label>
+                    <input name="password" type="password" placeholder="first name" autocomplete="off" class="login-form-input-light" value="">
+                </div>
+                <div class="login-username-light">
+                    <label class="login-form-label-light">last name</label>
+                    <input name="password" type="password" placeholder="last name" autocomplete="off" class="login-form-input-light" value="">
+                </div>
+                <div class="login-username-light">
+                    <label class="login-form-label-light">email</label>
+                    <input name="password" type="password" placeholder="email" autocomplete="off" class="login-form-input-light" value="">
+                </div>
+                <div class="login-username-light">
+                    <label class="login-form-label-light">password</label>
+                    <input name="password" type="password" placeholder="password" autocomplete="off" class="login-form-input-light" value="">
+                </div>
+                <div class="login-username-light">
+                    <label class="login-form-label-light">confirm password</label>
+                    <input name="password2" type="password" placeholder="confirm password" autocomplete="off" class="login-form-input-light" value="">
+                </div>
+                <button type="submit" class="login-form-button-light">sign up</button></form>
 
-        <div class="home-wrapper-light">
-            <main class="main-light">
-                <nav class="responsive-nav-light">
-                    <div class="responsive-nav-select-wrapper-light"><select class="responsive-nav-select-light"><option value="all">all</option><option value="music">music</option><option value="funny">funny</option><option value="videos">videos</option><option value="programming">programming</option><option value="news">news</option><option value="fashion">fashion</option></select></div>
-                    <a class="responsive-post-button-light" href="/createpost">create post</a>
-                </nav>
-                <ul class="post-container-light">
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </main>
-            <aside class="aside-wrapper-light"><button class="create-post-button-light" id="create-post-btn">create post</button>
-                <nav class="categories-list-light"><span class="categories-title-light">categories</span><a class="categories-item-light active" aria-current="page" href="/">all</a><a class="categories-item-light" href="/a/music">music</a>
-                    <a class="categories-item-light" href="/a/funny">funny</a><a class="categories-item-light" href="/a/videos">videos</a><a class="categories-item-light" href="/a/programming">programming</a>
-                    <a class="categories-item-light" href="/a/news">news</a>
-                    <a class="categories-item-light" href="/a/fashion">fashion</a>
-                </nav>
-            </aside>
-        </div>
-        <div id="myModal" class="modal">
-            <div class="post-form-container-light">
-                <form class="post-form-light">
-                    <div class="post-form-row-light">
-                        <div class="post-type-row-light">
-                            <input type="radio" name="radiogroup" id="link">
-                            <label for="link" class="post-type-active-light" id="link-type">link</label>
-                            <input type="radio" name="radiogroup" id="text">
-                            <label for="text" class="post-type-inactive-light" id="text-type">text</label>
-                        </div>
-                    </div>
-                    <div class="post-form-row-light">
-                        <label class="create-post-label-light">category</label>
-                        <div class="create-post-select-container-light">
-                            <select name="category" type="select" class="create-post-input-light">
-                                <option value="music">music</option>
-                                <option value="funny">funny</option>
-                                <option value="videos">videos</option>
-                                <option value="programming">programming</option>
-                                <option value="news">news</option>
-                                <option value="fashion">fashion</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="post-form-row-light">
-                        <label class="create-post-label-light">title</label>
-                        <input name="title" type="text" placeholder="title" autocomplete="off" class="create-post-input-light" value="">
-                    </div>
-                    <div class="post-form-row-light" id="link-type-input">
-                        <label class="create-post-label-light">url</label>
-                        <input name="url" type="url" placeholder="url" autocomplete="off" class="create-post-input-light" value="">
-                    </div>
-                    <div class="post-form-row-light" id="text-type-input">
-                        <label class="create-post-label-light">text</label>
-                        <textarea name="text" rows="6" placeholder="text" class="create-post-input-light"></textarea>
-                    </div>
-                    <button type="submit" class="create-post-form-button-light">create post</button>
-                </form>
-            </div>
         </div>
     </div>
     </div>
-    <script src="javascripts/index.js"></script>
+    <script src="../javascripts/index.js"></script>
 </body>
 
 </html>
