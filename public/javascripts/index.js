@@ -21,16 +21,15 @@ const toggleClass = (mode) => {
     for (let i = 0; i < elements.length; i++) {
         if (elements[i].className === '' || typeof elements[i].className === 'object')
             continue;
-        let index = 0;
-        if (elements[i].classList[0] === 'active')
-            index = 1;
-        const parts = elements[i].classList[index].split('-');
-        if (parts[parts.length - 1] === 'light') {
-            elements[i].classList.add(elements[i].classList[index].substring(0, elements[i].classList[index].length - 5) + 'dark');
-            elements[i].classList.remove(elements[i].classList[index]);
-        } else if (parts[parts.length - 1] === 'dark') {
-            elements[i].classList.add(elements[i].classList[index].substring(0, elements[i].classList[index].length - 4) + 'light');
-            elements[i].classList.remove(elements[i].classList[index]);
+        for (let j = 0; j < elements[i].classList.length; j++) {
+            const parts = elements[i].classList[j].split('-');
+            if (parts[parts.length - 1] === 'light' && mode === 'light') {
+                elements[i].classList.add(elements[i].classList[j].substring(0, elements[i].classList[j].length - 5) + 'dark');
+                elements[i].classList.remove(elements[i].classList[j--]);
+            } else if (parts[parts.length - 1] === 'dark' && mode === 'dark') {
+                elements[i].classList.add(elements[i].classList[j].substring(0, elements[i].classList[j].length - 4) + 'light');
+                elements[i].classList.remove(elements[i].classList[j--]);
+            }
         }
     }
 };

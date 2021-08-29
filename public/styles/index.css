@@ -292,6 +292,7 @@ input {
     display: flex;
     height: auto;
     background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(235, 237, 240);
 }
 
 .component-wrapper-light {
@@ -514,6 +515,8 @@ input {
     border: 1px solid rgb(235, 237, 240);
     border-radius: 2px;
     background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 85px;
 }
 
 .create-post-button-light {
@@ -588,6 +591,9 @@ input {
     border-image: initial;
     border-left: none;
     border-right: none;
+    position: sticky;
+    top: 59px;
+    z-index: 100;
 }
 
 .responsive-nav-select-wrapper-light {
@@ -1054,6 +1060,7 @@ input {
     display: flex;
     height: auto;
     background-color: rgb(38, 38, 38);
+    border-bottom: 1px solid rgb(51, 51, 51);
 }
 
 .component-wrapper-dark {
@@ -1267,6 +1274,8 @@ input {
     border: 1px solid rgb(51, 51, 51);
     border-radius: 2px;
     background-color: rgb(38, 38, 38);
+    position: sticky;
+    top: 85px;
 }
 
 .create-post-button-dark {

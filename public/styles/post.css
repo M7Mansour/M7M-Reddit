@@ -1,0 +1,438 @@
+textarea {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    column-count: initial !important;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding: 2px;
+}
+
+
+/* ------------------------------ light mode --------------------*/
+
+.main-post-wrapper-light {
+    overflow: hidden;
+    border: 1px solid rgb(235, 237, 240);
+    border-radius: 2px 2px 0px 0px;
+}
+
+.main-post-light {
+    display: flex;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.fdnSHg-light {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    border-left: 1px solid rgb(235, 237, 240);
+    padding: 8px;
+    min-width: 0px;
+}
+
+.Xdpjn-light {
+    display: flex;
+}
+
+.Xdpjn-light * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 900;
+    text-decoration: none;
+    color: rgb(69, 79, 91);
+    white-space: unset;
+}
+
+.iyZCUv-light {
+    margin: 8px -8px;
+    border-top: 1px solid rgb(235, 237, 240);
+    border-bottom: 1px solid rgb(235, 237, 240);
+    border-image: initial;
+    border-left: none;
+    border-right: none;
+    padding: 8px;
+    background-color: rgb(252, 252, 252);
+}
+
+.kOWlQl-light {
+    color: rgb(69, 79, 91);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.kOWlQl-light> :first-child {
+    margin-top: 0px;
+}
+
+.gBkGwr-light {
+    font-size: 13px;
+    margin-top: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gBkGwr-light>a {
+    transition: color 0.1s ease 0s;
+    text-underline-position: under;
+    text-decoration: none;
+    color: rgb(69, 79, 91);
+}
+
+.gBkGwr-light>a:hover {
+    color: rgb(24, 144, 255);
+}
+
+.gBkGwr-light>* {
+    margin-right: 4px;
+}
+
+.gBkGwr-dark>span {
+    color: rgb(129, 142, 153);
+}
+
+.cKlNNr-light {
+    transition: color 0.1s ease 0s;
+    text-underline-position: under;
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(69, 79, 91);
+}
+
+.fKcKMA-light {
+    transition: border 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    margin-top: -1px;
+    border: 1px solid rgb(235, 237, 240);
+    border-radius: 0px 0px 2px 2px;
+    max-width: none;
+    padding: 0px;
+}
+
+.fKcKMA-light:hover {
+    border: 1px solid rgb(24, 144, 255);
+}
+
+.hcNwzF-light {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+    border: 1px solid rgb(235, 237, 240);
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.dLVDIM-light {
+    transition: filter 0.1s ease 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cGlmih-light {
+    transition: border 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    --border: #1890ff;
+    --shadow: #1890ff4d;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(252, 252, 252);
+    font-size: 20px;
+    color: rgb(69, 79, 91);
+    appearance: none;
+    outline: none;
+    margin: 0px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 1px solid rgb(235, 237, 240);
+    border-radius: 0px;
+    resize: none;
+}
+
+.jlbGIc-light {
+    transition: filter 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(24, 144, 255);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    outline: none;
+    align-self: flex-end;
+    margin: 4px;
+    padding: 4px 12px;
+}
+
+.ivSYqH-light {
+    display: flex;
+    margin-top: -1px;
+    border: 1px solid rgb(235, 237, 240);
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    font-size: 13px;
+    color: rgb(129, 142, 153);
+}
+
+.gfVMDm-light {
+    margin-top: 16px;
+    list-style: none;
+}
+
+.dVWVjd-light {
+    margin-bottom: 8px;
+}
+
+.kEqgYk-light {
+    border: 1px solid rgb(235, 237, 240);
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.ebhVnM-light {
+    display: flex;
+    border-bottom: 1px solid rgb(235, 237, 240);
+    padding: 8px;
+    font-size: 13px;
+}
+
+.fughqv-light {
+    margin-left: 4px;
+    color: rgb(129, 142, 153);
+}
+
+.cymepz-light {
+    padding: 12px;
+}
+
+
+/* ------------------------------- dark mode ------------------------*/
+
+.main-post-wrapper-dark {
+    overflow: hidden;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 2px 2px 0px 0px;
+}
+
+.main-post-dark {
+    display: flex;
+    height: auto;
+    background-color: rgb(38, 38, 38);
+}
+
+.fdnSHg-dark {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    border-left: 1px solid rgb(51, 51, 51);
+    padding: 8px;
+    min-width: 0px;
+}
+
+.Xdpjn-dark {
+    display: flex;
+}
+
+.Xdpjn-dark * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 900;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    white-space: unset;
+}
+
+.iyZCUv-dark {
+    margin: 8px -8px;
+    border-top: 1px solid rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-image: initial;
+    border-left: none;
+    border-right: none;
+    padding: 8px;
+    background-color: rgb(33, 33, 33)
+}
+
+.kOWlQl-dark {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.kOWlQl-dark> :first-child {
+    margin-top: 0px;
+}
+
+.gBkGwr-dark {
+    font-size: 13px;
+    margin-top: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gBkGwr-dark>a {
+    transition: color 0.1s ease 0s;
+    text-underline-position: under;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.gBkGwr-dark>a:hover {
+    color: rgb(51, 144, 255);
+}
+
+.gBkGwr-dark>* {
+    margin-right: 4px;
+}
+
+.gBkGwr-dark>span {
+    color: rgb(176, 184, 191);
+}
+
+.cKlNNr-dark {
+    transition: color 0.1s ease 0s;
+    text-underline-position: under;
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.fKcKMA-dark {
+    transition: border 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    margin-top: -1px;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 0px 0px 2px 2px;
+    max-width: none;
+    padding: 0px;
+}
+
+.fKcKMA-light:hover {
+    border: 1px solid rgb(51, 144, 255);
+}
+
+.hcNwzF-dark {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 2px;
+    background-color: rgb(38, 38, 38);
+}
+
+.dLVDIM-dark {
+    transition: filter 0.1s ease 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cGlmih-dark {
+    transition: border 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    --border: #33a0ff;
+    --shadow: #33a0ff4d;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(33, 33, 33);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    appearance: none;
+    outline: none;
+    margin: 0px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-radius: 0px;
+    resize: none;
+}
+
+.jlbGIc-dark {
+    transition: filter 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(51, 160, 255);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    outline: none;
+    align-self: flex-end;
+    margin: 4px;
+    padding: 4px 12px;
+}
+
+.ivSYqH-dark {
+    display: flex;
+    margin-top: -1px;
+    border: 1px solid rgb(51, 51, 51);
+    padding: 8px;
+    background-color: rgb(38, 38, 38);
+    font-size: 13px;
+    color: rgb(176, 184, 191);
+}
+
+.gfVMDm-dark {
+    margin-top: 16px;
+    list-style: none;
+}
+
+.dVWVjd-dark {
+    margin-bottom: 8px;
+}
+
+.kEqgYk-dark {
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 2px;
+    background-color: rgb(38, 38, 38);
+}
+
+.ebhVnM-dark {
+    display: flex;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding: 8px;
+    font-size: 13px;
+}
+
+.fughqv-dark {
+    margin-left: 4px;
+    color: rgb(176, 184, 191);
+}
+
+.cymepz-dark {
+    padding: 12px;
+}
