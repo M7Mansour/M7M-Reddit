@@ -232,6 +232,23 @@ textarea {
     padding: 12px;
 }
 
+.bFFunB-light {
+    transition: color 0.1s ease 0s;
+    text-underline-position: under;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgb(69, 79, 91);
+    margin-left: auto;
+}
+
+.bFFunB-light:hover {
+    color: rgb(24, 144, 255);
+}
+
 
 /* ------------------------------- dark mode ------------------------*/
 
@@ -435,4 +452,21 @@ textarea {
 
 .cymepz-dark {
     padding: 12px;
+}
+
+.bFFunB-dark {
+    transition: color 0.1s ease 0s;
+    text-underline-position: under;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+}
+
+.bFFunB-dark:hover {
+    color: rgb(51, 144, 255);
 }
