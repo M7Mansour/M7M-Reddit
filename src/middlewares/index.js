@@ -1,3 +1,3 @@
 const authCheck = require('./auth');
-
-module.exports = { authCheck };
+const registration = require('./registration');
+module.exports = { authCheck, registration };
