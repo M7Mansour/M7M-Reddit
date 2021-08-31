@@ -1,8 +1,9 @@
+const { createCookies } = require('../../utilities');
 const checkUser = require('./checkUser');
 const createUser = require('./createUser');
 const validateSignup = require('./validation');
 
-const signup = (req, res, next) => {
+const signup = (req, res) => {
     const { userName, email, firstName, lastName, password } = req.body;
     const validation = validateSignup(userName, email, firstName, lastName, password);
     if (validation)
@@ -13,10 +14,8 @@ const signup = (req, res, next) => {
                 throw { message: exists, cause: 'validation error' };
             }
         }).then(() => createUser(userName, email, firstName, lastName, password))
-        .then(authCookie => {
-            res.cookie(process.env.AUTH_COOKIE, authCookie, { httponly: true, secure: true });
-            res.cookie('logedin', true);
-            res.cookie('username', userName);
+        .then(() => {
+            createCookies(res, userName, true, true);
             res.redirect('/');
         }).catch((err) => {
             if (!err.cause)
