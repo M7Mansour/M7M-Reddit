@@ -1,4 +1,4 @@
-const connection = require('../config/connection');
+const connection = require('../../config/connection');
 
 const addUserQuery = (userName, email, firstName, lastname, password) => {
     const sqlScript = {
