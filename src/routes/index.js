@@ -3,7 +3,9 @@ const signupRouter = require('./signup');
 const loginRouter = require('./login');
 const postsRouter = require('./posts');
 const commentsRouter = require('./comments');
+const userRouter = require('./user');
 
+router.use('/user', userRouter);
 router.use('/r', postsRouter);
 router.use('/comments', commentsRouter);
 router.use('/signup', signupRouter);
