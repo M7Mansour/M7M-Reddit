@@ -1,8 +1,10 @@
-const { getAllPosts, getCategoryPosts } = require('../../database/queries');
+const { getAllPosts, getCategoryPosts, getSinglePost } = require('../../database/queries');
 
-const selectQuery = (category) => {
+const selectQuery = (category, postID) => {
     if (category === 'all')
         return getAllPosts();
+    if (postID)
+        return getSinglePost(category, postID);
     return getCategoryPosts(category);
 };
 
