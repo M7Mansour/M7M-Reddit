@@ -1,4 +1,7 @@
-const validateCategoryPost = (category, postID) => {
+const validateCategoryPost = (category, postID, userid) => {
+    if (userid)
+        return Number.isInteger(userid - 0);
+
     if (postID && !Number.isInteger(postID - 0))
         return false;
 
