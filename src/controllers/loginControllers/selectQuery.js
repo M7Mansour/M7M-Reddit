@@ -1,10 +1,10 @@
 const { loginEmailQuery, loginUserNameQuery } = require('../../database/queries');
 
-const checkUser = (method) => {
+const validateQuery = (method, userNameEmail, password) => {
     if (method === 'userName')
-        return loginUserNameQuery;
+        return loginUserNameQuery(userNameEmail, password);
     if (method === 'email')
-        return loginEmailQuery;
+        return loginEmailQuery(userNameEmail, password);
 };
 
-module.exports = checkUser;
+module.exports = validateQuery;
