@@ -10,9 +10,8 @@ const signup = (req, res) => {
         return res.status(403).json({ message: validation });
 
     checkUser(userName, email).then((exists) => {
-            if (exists) {
+            if (exists)
                 throw { message: exists, cause: 'validation error' };
-            }
         }).then(() => createUser(userName, email, firstName, lastName, password))
         .then(() => {
             createCookies(res, userName, true, true);

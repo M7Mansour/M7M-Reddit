@@ -1,7 +1,7 @@
 const { signup, getSignupPage } = require('./signupControllers');
 const { login, getLoginPage } = require('./loginControllers');
 const { fetchPosts, createPost, deletePost } = require('./postsControllers');
-const { fetchComments } = require('./commentsControllers');
+const { fetchComments, createComment, deleteComment } = require('./commentsControllers');
 
 module.exports = {
     signup,
@@ -11,5 +11,7 @@ module.exports = {
     fetchPosts,
     fetchComments,
     createPost,
-    deletePost
+    deletePost,
+    createComment,
+    deleteComment
 };
