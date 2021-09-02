@@ -1,5 +1,6 @@
 const calculateTime = (timeStamp) => {
     const time = new Date(Date.now().valueOf() - new Date(timeStamp).valueOf());
+
     const date = {
         years: {
             value: time.getUTCFullYear() - 1970,

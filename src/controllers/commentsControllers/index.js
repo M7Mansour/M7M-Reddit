@@ -1,4 +1,6 @@
+const createComment = require('./createComment');
+const deleteComment = require('./deleteComment');
 const fetchComments = require('./fetchCommets');
-const validatePost = require('./validatePost');
+const validatePost = require('./validate');
 
-module.exports = { fetchComments, validatePost };
+module.exports = { fetchComments, validatePost, createComment, deleteComment };

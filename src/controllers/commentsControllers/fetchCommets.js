@@ -1,4 +1,4 @@
-const validatePost = require('./validatePost');
+const validatePost = require('./validate');
 const { postComments } = require('../../database/queries');
 const getFinalComments = require('./finalComments');
 

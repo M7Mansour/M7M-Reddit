@@ -5,7 +5,7 @@ const createPost = (req, res) => {
     const { type, category, title, content } = req.body;
     const userName = req.body.logedUser;
 
-    if (!validateCreatePost(userName, type, category, title, content))
+    if (!validateCreatePost(type, category, title, content))
         return res.status(403).json({ message: 'forbidden' });
 
     ownerID(userName)

@@ -1,6 +1,6 @@
 const { checkUserQuery, addUserQuery } = require('./signupQueries');
 const { loginEmailQuery, loginUserNameQuery } = require('./loginQueries');
-const { postComments } = require('./commentsQueries');
+const { postComments, addComment, checkPost, removeComment, checkComment } = require('./commentsQueries');
 const {
     getAllPosts,
     getCategoryPosts,
@@ -29,5 +29,9 @@ module.exports = {
     incrementViews,
     addPost,
     removePost,
-    ownerID
+    ownerID,
+    addComment,
+    checkPost,
+    removeComment,
+    checkComment
 };
