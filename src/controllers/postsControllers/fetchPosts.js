@@ -10,7 +10,7 @@ const fetchPosts = (req, res) => {
 
     selectQuery(category, postid, username)
         .then(data => data.rows)
-        .then(posts => getFinalPosts(posts))
+        .then(posts => getFinalPosts(posts, req.body.logedUser))
         .then((postsData) => res.json(postsData))
         .catch(err => res.status(500).json({ message: 'Internal server error' }));
 };

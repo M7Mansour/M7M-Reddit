@@ -1,10 +1,10 @@
-const getCommentsOwner = require("./postCommentsOwner");
+const addPostInf = require("./postCommentsOwner");
 
-const getFinalPosts = (posts) => {
+const getFinalPosts = (posts, userName) => {
     const postsData = [];
 
     posts.forEach(post => {
-        postsData.push(getCommentsOwner(post));
+        postsData.push(addPostInf(post, userName));
     });
 
     return Promise.all(postsData);
