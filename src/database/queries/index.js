@@ -1,7 +1,7 @@
 const { checkUserQuery, addUserQuery } = require('./signupQueries');
 const { loginEmailQuery, loginUserNameQuery } = require('./loginQueries');
 const { postComments, addComment, checkPost, removeComment, checkComment } = require('./commentsQueries');
-const { checkVote, createVote, deleteVote, updateVote } = require('./votesQueries');
+const { checkVote, createVote, deleteVote, updateVote, getPostVotes } = require('./votesQueries');
 const {
     getAllPosts,
     getCategoryPosts,
@@ -38,5 +38,6 @@ module.exports = {
     checkVote,
     createVote,
     deleteVote,
-    updateVote
+    updateVote,
+    getPostVotes
 };
