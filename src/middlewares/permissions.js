@@ -5,7 +5,10 @@ const permissions = (req, res, next) => {
         '/post/create',
         '/post/delete',
         '/comments/create',
-        '/comments/delete'
+        '/comments/delete',
+        '/votes/upvote',
+        '/votes/downvote',
+        '/votes/unvote'
     ];
 
     const endpoint = req.path;
