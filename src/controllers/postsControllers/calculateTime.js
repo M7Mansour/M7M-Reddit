@@ -26,6 +26,7 @@ const calculateTime = (timeStamp) => {
             symbol: 's'
         }
     };
+
     for (let part in date) {
         const temp = date[part];
         if (temp['value'] !== 0)

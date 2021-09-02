@@ -1,6 +1,6 @@
-const validateCategoryPost = (category, postID, userid) => {
-    if (userid)
-        return Number.isInteger(userid - 0);
+const validateCategoryPost = (category, postID, userName) => {
+    if (userName)
+        return /^[a-z]{1}[a-zA-Z0-9]{4,29}$/.test(userName) && userName !== undefined;
 
     if (postID && !Number.isInteger(postID - 0))
         return false;

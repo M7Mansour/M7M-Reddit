@@ -1,12 +1,14 @@
 const getFinalPosts = require('./finalPosts');
 const selectQuery = require('./selectQuery');
-const validateCategoryPost = require('./validateCategory');
+const validateCategoryPost = require('./validateCategoryPost');
 
 const fetchPosts = (req, res) => {
-    const { category, postid, userid } = req.params;
-    if (!validateCategoryPost(category, postid, userid))
+    const { category, postid, username } = req.params;
+
+    if (!validateCategoryPost(category, username, username))
         return res.status(400).json({ message: 'Bad request!' });
-    selectQuery(category, postid, userid)
+
+    selectQuery(category, postid, username)
         .then(data => data.rows)
         .then(posts => getFinalPosts(posts))
         .then((postsData) => res.json(postsData))
