@@ -1,10 +1,10 @@
 const calculateTime = require('./calculateTime');
+const upvoteAverage = require('./upvoteAverage');
 
-const asimplePost = (data) => {
-    data.postData.post_time = calculateTime(data.postData.post_time);
-    data.postData.owner_id = data.postData.OWNER;
-    data.postData.OWNER = data.owner;
-    return {...data.postData, comments: data.comments };
+const asimplePost = (post) => {
+    post.post_time = calculateTime(post.post_time);
+    post.upvotes = upvoteAverage(post.votes, post.upvotes);
+    return post;
 };
 
 module.exports = asimplePost;
