@@ -3,6 +3,7 @@ const asimplePost = require("./asimplePost");
 
 const getCommentsOwner = (post) => {
     const temp = { postData: post };
+
     return numberOfComments(post.id)
         .then(data => temp.comments = data.rows[0].num_comments)
         .then(() => owner(post.OWNER))

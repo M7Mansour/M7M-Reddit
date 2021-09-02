@@ -1,3 +1,4 @@
 const fetchComments = require('./fetchCommets');
+const validatePost = require('./validatePost');
 
-module.exports = { fetchComments };
+module.exports = { fetchComments, validatePost };

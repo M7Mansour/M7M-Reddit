@@ -1,7 +1,18 @@
 const { checkUserQuery, addUserQuery } = require('./signupQueries');
 const { loginEmailQuery, loginUserNameQuery } = require('./loginQueries');
-const { getAllPosts, getCategoryPosts, numberOfComments, owner, getSinglePost, getUserPosts, incrementViews } = require('./postsQueries');
 const { postComments } = require('./commentsQueries');
+const {
+    getAllPosts,
+    getCategoryPosts,
+    numberOfComments,
+    owner,
+    getSinglePost,
+    getUserPosts,
+    incrementViews,
+    addPost,
+    removePost,
+    ownerID
+} = require('./postsQueries');
 
 module.exports = {
     checkUserQuery,
@@ -15,5 +26,8 @@ module.exports = {
     getSinglePost,
     postComments,
     getUserPosts,
-    incrementViews
+    incrementViews,
+    addPost,
+    removePost,
+    ownerID
 };
