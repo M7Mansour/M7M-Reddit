@@ -1,4 +1,4 @@
-.fyxaKz {
+.valid {
     animation: 0.25s ease 0s 1 normal none running eMLfYp;
     font-size: 12px;
     font-weight: 600;
@@ -50,6 +50,13 @@
     position: relative;
     margin-bottom: 24px;
     width: 100%;
+}
+
+#server-message {
+    position: relative;
+    color: rgb(245, 34, 45);
+    width: 100%;
+    text-align: center;
 }
 
 .login-form-label-light {

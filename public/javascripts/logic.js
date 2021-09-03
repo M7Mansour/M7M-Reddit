@@ -1,6 +1,6 @@
 const fetchRequest = (endpoint, method, body) => {
     return fetch(endpoint, {
-        method: method,
+        method,
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
