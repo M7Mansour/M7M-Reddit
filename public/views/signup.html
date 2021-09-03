@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M7M-Reddit</title>
     <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/registration.css">
 </head>
 
 <body>
@@ -32,34 +33,48 @@
             <form class="login-form-light">
                 <div class="login-username-light">
                     <label class="login-form-label-light">username</label>
-                    <input name="username" type="text" placeholder="username" autocomplete="off" class="login-form-input-light" value="">
+                    <span class="valid">required</span>
+                    <input name="username" type="text" placeholder="username" class="login-form-input-light">
+                    <span class="constraints">must begin with lowercase letter and can have only lower-upper case letters and numbers and at least have length of 5</span>
                 </div>
                 <div class="login-username-light">
                     <label class="login-form-label-light">first name</label>
-                    <input name="password" type="password" placeholder="first name" autocomplete="off" class="login-form-input-light" value="">
+                    <span class="valid">required</span>
+                    <input name="firstName" type="text" placeholder="first name" class="login-form-input-light">
+                    <span class="constraints">can have letters only and length of 30 maximum</span>
                 </div>
                 <div class="login-username-light">
                     <label class="login-form-label-light">last name</label>
-                    <input name="password" type="password" placeholder="last name" autocomplete="off" class="login-form-input-light" value="">
+                    <span class="valid">required</span>
+                    <input name="lastName" type="text" placeholder="last name" class="login-form-input-light">
+                    <span class="constraints">can have letters only and length of 30 maximum</span>
                 </div>
                 <div class="login-username-light">
                     <label class="login-form-label-light">email</label>
-                    <input name="password" type="password" placeholder="email" autocomplete="off" class="login-form-input-light" value="">
+                    <span class="valid">required</span>
+                    <input name="email" type="email" placeholder="email" class="login-form-input-light">
+                    <span class="constraints">a valid email</span>
                 </div>
                 <div class="login-username-light">
                     <label class="login-form-label-light">password</label>
-                    <input name="password" type="password" placeholder="password" autocomplete="off" class="login-form-input-light" value="">
+                    <span class="valid">required</span>
+                    <input name="password" type="password" placeholder="password" class="login-form-input-light">
+                    <span class="constraints">must have 3 of 4 : upper, lower case letters, numbers, !@#$%^&* and length of 8 minimum </span>
                 </div>
                 <div class="login-username-light">
                     <label class="login-form-label-light">confirm password</label>
-                    <input name="password2" type="password" placeholder="confirm password" autocomplete="off" class="login-form-input-light" value="">
+                    <span class="valid">required</span>
+                    <input name="password2" type="password" placeholder="confirm password" class="login-form-input-light">
                 </div>
-                <button type="submit" class="login-form-button-light">sign up</button></form>
+                <div id="server-message"></div>
+                <button type="submit" class="login-form-button-light" id="signup-btn">sign up</button></form>
 
         </div>
     </div>
     </div>
-    <script src="../javascripts/index.js"></script>
+    <script src="../javascripts/logic.js"></script>
+    <script src="../javascripts/general.js"></script>
+    <script src="../javascripts/signup.js"></script>
 </body>
 
 </html>
