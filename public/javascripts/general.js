@@ -1,6 +1,12 @@
 const elements = document.getElementsByTagName('*');
 const modeToggler = document.querySelector('#mode-toggler');
 
+const getCookie = (name) => {
+    const value = `; ${cookies}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
 if (localStorage.getItem('mode') === null)
     localStorage.setItem('mode', 'light');
 
