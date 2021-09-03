@@ -6,6 +6,7 @@ const commentsRouter = require('./comments');
 const userRouter = require('./user');
 const postRouter = require('./post');
 const votesRouter = require('./votes');
+const logoutRouter = require('./logout');
 
 router.use('/user', userRouter);
 router.use('/r', categoryPostsRouter);
@@ -14,5 +15,6 @@ router.use('/comments', commentsRouter);
 router.use('/votes', votesRouter);
 router.use('/signup', signupRouter);
 router.use('/login', loginRouter);
+router.use('/logout', logoutRouter);
 
 module.exports = router;
