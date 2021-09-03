@@ -1,0 +1,191 @@
+.fyxaKz {
+    animation: 0.25s ease 0s 1 normal none running eMLfYp;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: rgb(245, 34, 45);
+    display: none;
+}
+
+.required {
+    display: inline;
+}
+
+.constraints {
+    color: seagreen;
+}
+
+.wrong {
+    color: rgb(245, 34, 45);
+}
+
+
+/* ------------------------------------------------------------------ light mode ---------------------------------------------------------------------*/
+
+
+/*                                                ------------------- login-form -------------------*/
+
+.login-form-wrapper-light {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+    border: 1px solid rgb(235, 237, 240);
+    border-radius: 2px;
+    max-width: 500px;
+    padding: 24px;
+    background-color: rgb(255, 255, 255);
+}
+
+.login-form-light {
+    transition: filter 0.1s ease 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login-username-light {
+    position: relative;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.login-form-label-light {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(129, 142, 153);
+}
+
+.login-form-input-light {
+    transition: border 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    --border: #1890ff;
+    --shadow: #1890ff4d;
+    display: block;
+    border: 1px solid rgb(235, 237, 240);
+    border-radius: 3px;
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(252, 252, 252);
+    font-size: 30px;
+    color: rgb(69, 79, 91);
+    appearance: none;
+    outline: none;
+    resize: vertical;
+}
+
+input.input-required {
+    border: 1px solid red;
+}
+
+.login-form-input-light:focus {
+    box-shadow: 0px 0px 5px;
+}
+
+input.input-required:focus {
+    box-shadow: 0px 0px 5px red;
+}
+
+.login-form-button-light {
+    transition: filter 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 24px;
+    background-color: rgb(24, 144, 255);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    outline: none;
+    align-self: flex-end;
+}
+
+.login-form-button-light:hover {
+    filter: brightness(110%);
+}
+
+
+/* ------------------------------------------------------------------ dark mode ---------------------------------------------------------------------*/
+
+
+/*                                                     -------------- login-form --------------- */
+
+.login-form-wrapper-dark {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 2px;
+    max-width: 500px;
+    padding: 24px;
+    background-color: rgb(38, 38, 38);
+}
+
+.login-form-dark {
+    transition: filter 0.1s ease 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login-username-dark {
+    position: relative;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.login-form-label-dark {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(176, 184, 191);
+}
+
+.login-form-input-dark {
+    transition: border 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    --border: #33a0ff;
+    --shadow: #33a0ff4d;
+    display: block;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 3px;
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(33, 33, 33);
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    appearance: none;
+    outline: none;
+    resize: vertical;
+}
+
+.login-form-input-dark:focus {
+    box-shadow: 0px 0px 5px;
+}
+
+.login-form-button-dark {
+    transition: filter 0.1s ease 0s, box-shadow 0.1s ease 0s;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 24px;
+    background-color: rgb(51, 160, 255);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    outline: none;
+    align-self: flex-end;
+}
+
+.login-form-button-dark:hover {
+    filter: brightness(110%);
+}
