@@ -18,6 +18,6 @@ app.use(permissions);
 app.use(express.static(join(__dirname, '..', 'public')));
 app.use(router);
 
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 
 module.exports = app;
