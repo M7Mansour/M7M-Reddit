@@ -309,7 +309,7 @@ input {
     color: rgb(69, 79, 91);
 }
 
-.not-vote-button-light {
+.upvote-0-button-light {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -320,17 +320,17 @@ input {
     --iconColor: #b6b6b6;
 }
 
-.vote-button-light:hover {
+.upvote-1-button-light:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(226, 252, 224);
 }
 
-.not-vote-button-light:hover {
+.upvote-0-button-light:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(226, 252, 224);
 }
 
-.vote-button-light {
+.upvote-1-button-light {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -341,7 +341,7 @@ input {
     --iconColor: #f9920b;
 }
 
-.vote-button-light::after {
+.upvote-1-button-light::after {
     border-top: 2px solid var(--iconColor);
     border-right: 2px solid var(--iconColor);
     top: 3px;
@@ -354,7 +354,7 @@ input {
     height: 8px;
 }
 
-.not-vote-button-light::after {
+.upvote-0-button-light::after {
     border-top: 2px solid var(--iconColor);
     border-right: 2px solid var(--iconColor);
     top: 3px;
@@ -367,7 +367,7 @@ input {
     height: 8px;
 }
 
-.not-unvote-button-light {
+.downvote-0-button-light {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -378,7 +378,7 @@ input {
     --iconColor: #b6b6b6;
 }
 
-.unvote-button-light {
+.downvote-1-button-light {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -389,17 +389,17 @@ input {
     --iconColor: #f9920b;
 }
 
-.not-unvote-button-light:hover {
+.downvote-0-button-light:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(255, 221, 221);
 }
 
-.unvote-button-light:hover {
+.downvote-1-button-light:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(255, 221, 221);
 }
 
-.unvote-button-light::after {
+.downvote-1-button-light::after {
     border-bottom: 2px solid var(--iconColor);
     border-left: 2px solid var(--iconColor);
     top: -2px;
@@ -412,7 +412,7 @@ input {
     height: 8px;
 }
 
-.not-unvote-button-light::after {
+.downvote-0-button-light::after {
     border-bottom: 2px solid var(--iconColor);
     border-left: 2px solid var(--iconColor);
     top: -2px;
@@ -516,7 +516,7 @@ input {
     border-radius: 2px;
     background-color: rgb(255, 255, 255);
     position: sticky;
-    top: 85px;
+    top: 100px;
 }
 
 .create-post-button-light {
@@ -564,6 +564,7 @@ input {
     font-size: 15px;
     text-decoration: none;
     color: rgb(69, 79, 91);
+    cursor: pointer;
 }
 
 .categories-item-light.active {
@@ -1004,7 +1005,7 @@ input {
     color: rgb(255, 255, 255);
 }
 
-.not-vote-button-dark {
+.upvote-0-button-dark {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -1015,7 +1016,7 @@ input {
     --iconColor: #b6b6b6;
 }
 
-.vote-button-dark {
+.upvote-1-button-dark {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -1026,17 +1027,17 @@ input {
     --iconColor: #f9920b;
 }
 
-.vote-button-dark:hover {
+.upvote-1-button-dark:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(136, 252, 128);
 }
 
-.not-vote-button-dark:hover {
+.upvote-0-button-dark:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(136, 252, 128);
 }
 
-.vote-button-dark::after {
+.upvote-1-button-dark::after {
     border-top: 2px solid var(--iconColor);
     border-right: 2px solid var(--iconColor);
     top: 3px;
@@ -1049,7 +1050,7 @@ input {
     height: 8px;
 }
 
-.not-vote-button-dark::after {
+.upvote-0-button-dark::after {
     border-top: 2px solid var(--iconColor);
     border-right: 2px solid var(--iconColor);
     top: 3px;
@@ -1062,7 +1063,7 @@ input {
     height: 8px;
 }
 
-.not-unvote-button-dark {
+.downvote-0-button-dark {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -1073,7 +1074,7 @@ input {
     --iconColor: #b6b6b6;
 }
 
-.unvote-button-dark {
+.downvote-1-button-dark {
     transition: background-color 0.1s ease 0s;
     border: 0px;
     border-radius: 3px;
@@ -1084,17 +1085,17 @@ input {
     --iconColor: #f9920b;
 }
 
-.not-unvote-button-dark:hover {
+.downvote-0-button-dark:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(255, 94, 94);
 }
 
-.unvote-button-dark:hover {
+.downvote-1-button-dark:hover {
     transition: background-color 0.1s ease 0s;
     background-color: rgb(255, 94, 94);
 }
 
-.unvote-button-dark::after {
+.downvote-1-button-dark::after {
     border-bottom: 2px solid var(--iconColor);
     border-left: 2px solid var(--iconColor);
     top: -2px;
@@ -1107,7 +1108,7 @@ input {
     height: 8px;
 }
 
-.not-unvote-button-dark::after {
+.downvote-0-button-dark::after {
     border-bottom: 2px solid var(--iconColor);
     border-left: 2px solid var(--iconColor);
     top: -2px;
@@ -1202,7 +1203,7 @@ input {
     border-radius: 2px;
     background-color: rgb(38, 38, 38);
     position: sticky;
-    top: 85px;
+    top: 100px;
 }
 
 .create-post-button-dark {
@@ -1250,6 +1251,7 @@ input {
     font-size: 15px;
     text-decoration: none;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .categories-item-dark.active {

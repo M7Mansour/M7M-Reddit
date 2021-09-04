@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const homeRouter = require('./home');
 const signupRouter = require('./signup');
 const loginRouter = require('./login');
 const categoryPostsRouter = require('./categoryPosts');
@@ -16,5 +17,5 @@ router.use('/votes', votesRouter);
 router.use('/signup', signupRouter);
 router.use('/login', loginRouter);
 router.use('/logout', logoutRouter);
-
+router.use('/', homeRouter);
 module.exports = router;
