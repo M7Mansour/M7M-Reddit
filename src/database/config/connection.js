@@ -5,7 +5,7 @@ let dbUrl = '';
 
 switch (NODE_ENV) {
     case 'production':
-        dbUrl = DB_URL;
+        dbUrl = DATABASE_URL;
         break;
     case 'development':
         dbUrl = DEV_DB_URL;
