@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M7M-Reddit</title>
+    <link rel="icon" href="./images/redditIcon.png">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 
@@ -32,199 +33,31 @@
         <div class="home-wrapper-light">
             <main class="main-light">
                 <nav class="responsive-nav-light">
-                    <div class="responsive-nav-select-wrapper-light"><select class="responsive-nav-select-light"><option value="all">all</option><option value="music">music</option><option value="funny">funny</option><option value="videos">videos</option><option value="programming">programming</option><option value="news">news</option><option value="fashion">fashion</option></select></div>
-                    <a class="responsive-post-button-light" href="/createpost">create post</a>
+                    <div class="responsive-nav-select-wrapper-light">
+                        <select class="responsive-nav-select-light">
+                            <option value="all">all</option>
+                            <option value="music">music</option>
+                            <option value="funny">funny</option>
+                            <option value="videos">videos</option>
+                            <option value="programming">programming</option>
+                            <option value="news">news</option>
+                            <option value="fashion">fashion</option>
+                        </select>
+                    </div>
+                    <button class="responsive-post-button-light" id="create-post-res-btn">create post</button>
                 </nav>
                 <ul class="post-container-light">
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light">
-                                <button class="not-vote-button-light"></button>
-                                <span>226</span>
-                                <button class="not-unvote-button-light"></button>
-                            </div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light">
-                                    <a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a>
-                                </div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light">
-                                    <a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a>
-                                    <a href="/a/programming">/a/programming</a><span>by</span>
-                                    <a class="owner-light" href="/u/Beeezle">Beeezle</a>
-                                    <span>2Y ago</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="post-wrapper-light">
-                            <div class="component-wrapper-light"><button class="not-vote-button-light"></button><span>226</span><button class="not-unvote-button-light"></button></div>
-                            <div class="content-wrapper-light">
-                                <div class="title-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a></div>
-                                <div class="post-text-wrapper-light">Now lemme tell ya something, young blood.</div>
-                                <div class="detail-wrapper-light"><a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a><a href="/a/programming">/a/programming</a><span>by</span><a class="owner-light" href="/u/Beeezle">Beeezle</a><span>2Y ago</span></div>
-                            </div>
-                        </div>
-                    </li>
-
                 </ul>
             </main>
             <aside class="aside-wrapper-light"><button class="create-post-button-light" id="create-post-btn">create post</button>
-                <nav class="categories-list-light"><span class="categories-title-light">categories</span><a class="categories-item-light active" aria-current="page" href="/">all</a><a class="categories-item-light" href="/a/music">music</a>
-                    <a class="categories-item-light" href="/a/funny">funny</a><a class="categories-item-light" href="/a/videos">videos</a><a class="categories-item-light" href="/a/programming">programming</a>
-                    <a class="categories-item-light" href="/a/news">news</a>
-                    <a class="categories-item-light" href="/a/fashion">fashion</a>
+                <nav class="categories-list-light"><span class="categories-title-light">categories</span>
+                    <span class="categories-item-light active" id="c-all">all</span>
+                    <span class="categories-item-light" id="c-music">music</span>
+                    <span class="categories-item-light" id="c-funny">funny</span>
+                    <span class="categories-item-light" id="c-videos">videos</span>
+                    <span class="categories-item-light" id="c-programming">programming</span>
+                    <span class="categories-item-light" id="c-news">news</span>
+                    <span class="categories-item-light" id="c-fashion">fashion</span>
                 </nav>
             </aside>
         </div>
@@ -264,7 +97,7 @@
                         <label class="create-post-label-light">text</label>
                         <textarea name="text" rows="6" placeholder="text" class="create-post-input-light"></textarea>
                     </div>
-                    <button type="submit" class="create-post-form-button-light">create post</button>
+                    <button type="submit" class="create-post-form-button-light" id="create-post-request-btn">create post</button>
                 </form>
             </div>
         </div>

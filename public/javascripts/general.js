@@ -52,3 +52,22 @@ modeToggler.addEventListener('click', () => {
         mode = 'light';
     }
 });
+
+const createElement = (tag, classes, innerText, href, eventType, eventFunction) => {
+    // create HTML element
+    const element = document.createElement(tag);
+    // add element classes
+    if (classes)
+        for (let i = 0; i < classes.length; i++)
+            element.classList.add(classes[i]);
+    // add element innerText
+    if (innerText)
+        element.appendChild(document.createTextNode(innerText));
+    // add element href 
+    if (href)
+        element.href = href;
+    // add event listener
+    if (eventType)
+        element.addEventListener(eventType, eventFunction);
+    return element;
+};

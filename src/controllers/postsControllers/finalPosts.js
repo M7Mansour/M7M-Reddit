@@ -1,4 +1,4 @@
-const addPostInf = require("./postCommentsOwner");
+const addPostInf = require("./postAddInfo");
 
 const getFinalPosts = (posts, userName) => {
     const postsData = [];
