@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const { DB_URL, DEV_DB_URL, TEST_DB_URL, NODE_ENV } = process.env;
+const { DATABASE_URL, DEV_DB_URL, TEST_DB_URL, NODE_ENV } = process.env;
 
 let dbUrl = '';
 
