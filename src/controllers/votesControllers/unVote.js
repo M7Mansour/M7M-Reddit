@@ -2,9 +2,9 @@ const { deleteVote, ownerID } = require('../../database/queries');
 const validate = require('./validate');
 
 const unVote = (req, res) => {
-    const { OWNER, id } = req.body;
+    const { id } = req.body;
     const userName = req.body.logedUser;
-    if (!validate(id) || userName !== OWNER)
+    if (!validate(id))
         return res.status(403).json({ message: 'forbidden' });
 
     ownerID(userName)

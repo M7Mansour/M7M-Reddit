@@ -11,7 +11,7 @@ const cookies = document.cookie;
 const logedIn = getCookie('logedin');
 const logedUser = getCookie('username');
 const categoryPath = window.location.pathname;
-const postsContainer = document.querySelector('.post-container-light');
+const postsContainer = document.querySelector(`.post-container-${mode}`);
 const categoryAsideItems = document.querySelectorAll(`.categories-item-${mode}`);
 const categorySelectNav = document.querySelector(`.responsive-nav-select-${mode}`);
 const form = document.querySelector('form');
@@ -25,7 +25,7 @@ setActive(categoryPath.substring(1));
 
 if (logedIn === 'true') {
     navLinks[0].innerText = logedUser;
-    navLinks[0].parentElement.href = `/user/${logedUser}`;
+    navLinks[0].parentElement.href = `/user/profile/${logedUser}`;
     navLinks[1].innerText = 'logout';
     navLinks[1].parentElement.href = '/logout';
 } else {
@@ -61,13 +61,61 @@ textType.onclick = () => {
     textTypeInput.style.display = 'block';
 };
 
+const upvoteDom = (e) => {
+    const upvoteState = e.className.split('-')[1] - 0;
+    const voteNumSpan = e.parentElement.querySelector('span');
+    const votesNumber = voteNumSpan.innerText - 0;
+    const downvoteBtn = e.parentElement.lastChild;
+    const downvoteState = downvoteBtn.className.split('-')[1] - 0;
+    const id = e.parentElement.querySelector('input').value;
+    if (!upvoteState) {
+        fetchRequest('/votes/upvote', 'POST', { id });
+        e.className = `upvote-1-button-${mode}`;
+        if (!downvoteState)
+            voteNumSpan.innerText = votesNumber + 1;
+        else {
+            downvoteBtn.className = `downvote-0-button-${mode}`;
+            voteNumSpan.innerText = votesNumber + 2;
+        }
+    } else {
+        fetchRequest('/votes/unvote', 'DELETE', { id });
+        e.className = `upvote-0-button-${mode}`;
+        voteNumSpan.innerText = votesNumber - 1;
+    }
+};
+
+const downvoteDom = (e) => {
+    console.log(3);
+    const downvoteState = e.className.split('-')[1] - 0;
+    const voteNumSpan = e.parentElement.querySelector('span');
+    const votesNumber = voteNumSpan.innerText - 0;
+    const upvoteBtn = e.parentElement.firstChild;
+    const upvoteState = upvoteBtn.className.split('-')[1] - 0;
+    const id = e.parentElement.querySelector('input').value;
+    if (!downvoteState) {
+        fetchRequest('/votes/downvote', 'POST', { id });
+        e.className = `downvote-1-button-${mode}`;
+        if (!upvoteState)
+            voteNumSpan.innerText = votesNumber - 1;
+        else {
+            upvoteBtn.className = `upvote-0-button-${mode}`;
+            voteNumSpan.innerText = votesNumber - 2;
+        }
+    } else {
+        fetchRequest('/votes/unvote', 'DELETE', { id });
+        e.className = `downvote-0-button-${mode}`;
+        voteNumSpan.innerText = votesNumber + 1;
+    }
+};
+
 const createPost = (type, mode, upvote, downvote, votes, title, content, postID, comments, category, userName, time) => {
     const listItem = createElement('i');
     const postWrapper = createElement('div', [`post-wrapper-${mode}`]);
     const compWrapper = createElement('div', [`component-wrapper-${mode}`]);
-    const upvoteBtn = createElement('button', [`upvote-${upvote}-button-${mode}`]);
+    const idInput = createElement('input', null, null, null, null, null, 'hidden', postID);
+    const upvoteBtn = createElement('button', [`upvote-${upvote}-button-${mode}`], null, null, 'click', upvoteDom);
     const voteNumSpan = createElement('span', null, `${votes}`);
-    const downvoteBtn = createElement('button', [`downvote-${downvote}-button-${mode}`]);
+    const downvoteBtn = createElement('button', [`downvote-${downvote}-button-${mode}`], null, null, 'click', downvoteDom);
     const contentWrapper = createElement('div', [`content-wrapper-${mode}`]);
     const titleWrapper = createElement('div', [`title-wrapper-${mode}`]);
     const titleLink = createElement('a', null, title, type === 'url' ? content : `/post/${postID}`);
@@ -77,11 +125,11 @@ const createPost = (type, mode, upvote, downvote, votes, title, content, postID,
     const categoryLink = createElement('a', null, `/r/${category}`, `/${category}`);
     const bySpan = createElement('span', null, 'by');
     const ProfileLink = createElement('a', [`owner-${mode}`], userName, `/user/profile/${userName}`);
-    const timeSpan = createElement('span', null, `${time} ago`);
-
+    const timeSpan = createElement('span', null, time ? `${time} ago` : 'now');
 
     compWrapper.appendChild(upvoteBtn);
     compWrapper.appendChild(voteNumSpan);
+    compWrapper.appendChild(idInput);
     compWrapper.appendChild(downvoteBtn);
 
     titleWrapper.appendChild(titleLink);

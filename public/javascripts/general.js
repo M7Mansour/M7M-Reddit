@@ -53,7 +53,7 @@ modeToggler.addEventListener('click', () => {
     }
 });
 
-const createElement = (tag, classes, innerText, href, eventType, eventFunction) => {
+const createElement = (tag, classes, innerText, href, eventType, eventFunction, type, value) => {
     // create HTML element
     const element = document.createElement(tag);
     // add element classes
@@ -68,6 +68,14 @@ const createElement = (tag, classes, innerText, href, eventType, eventFunction) 
         element.href = href;
     // add event listener
     if (eventType)
-        element.addEventListener(eventType, eventFunction);
+        element.addEventListener(eventType, () => {
+            eventFunction(element);
+        });
+    // specify element type
+    if (type)
+        element.type = type;
+    // add value
+    if (value)
+        element.value = value;
     return element;
 };
