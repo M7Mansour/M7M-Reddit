@@ -118,6 +118,10 @@ fetchPost(postId, category);
 
 const addComment = (e) => {
     e.preventDefault();
+    console.log(logedIn);
+    if (logedIn !== 'true')
+        return window.location.replace(`${window.location.origin}/login`);
+
     const content = commentForm.querySelector('textarea');
     fetchRequest('/comments/create', 'POST', { postid: postId, content: content.value })
         .then(() => content.value = '')
