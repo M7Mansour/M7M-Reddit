@@ -19,7 +19,6 @@ const deleteComment = (req, res) => {
         .then(() => removeComment(id))
         .then(() => res.json({ message: 'comment deleted successfully!' }))
         .catch(err => {
-            console.log(err);
             if (!err.cause)
                 res.json({ message: 'internal server error' })
             else res.json({ message: err.message });

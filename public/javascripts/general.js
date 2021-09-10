@@ -1,11 +1,17 @@
 const elements = document.getElementsByTagName('*');
 const modeToggler = document.querySelector('#mode-toggler');
-
-const getCookie = (name) => {
-    const value = `; ${cookies}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-}
+const urlType = document.querySelector('#link-type');
+const textType = document.querySelector('#text-type');
+const urlTypeInput = document.querySelector('#link-type-input');
+const textTypeInput = document.querySelector('#text-type-input');
+const modal = document.querySelector("#myModal");
+const createPostBtn = document.querySelector("#create-post-btn");
+const createPostResBtn = document.querySelector('#create-post-res-btn');
+const createPostRequestBtn = document.querySelector('#create-post-request-btn');
+const navLinks = document.querySelectorAll('.nav-links');
+const cookies = document.cookie;
+const logedIn = getCookie('logedin');
+const logedUser = getCookie('username');
 
 if (localStorage.getItem('mode') === null)
     localStorage.setItem('mode', 'light');
@@ -78,4 +84,123 @@ const createElement = (tag, classes, innerText, href, eventType, eventFunction, 
     if (value)
         element.value = value;
     return element;
+};
+
+const upvoteDom = (e) => {
+    if (logedIn !== 'true')
+        return window.location.replace(`${window.location.origin}/login`);
+    const upvoteState = e.className.split('-')[1] - 0;
+    const voteNumSpan = e.parentElement.querySelector('span');
+    const votesNumber = voteNumSpan.innerText - 0;
+    const downvoteBtn = e.parentElement.querySelectorAll('button')[1];
+    const downvoteState = downvoteBtn.className.split('-')[1] - 0;
+    const id = e.parentElement.querySelector('input').value;
+    if (!upvoteState) {
+        fetchRequest('/votes/upvote', 'POST', { id });
+        e.className = `upvote-1-button-${mode}`;
+        if (!downvoteState)
+            voteNumSpan.innerText = votesNumber + 1;
+        else {
+            downvoteBtn.className = `downvote-0-button-${mode}`;
+            voteNumSpan.innerText = votesNumber + 2;
+        }
+    } else {
+        fetchRequest('/votes/unvote', 'DELETE', { id });
+        e.className = `upvote-0-button-${mode}`;
+        voteNumSpan.innerText = votesNumber - 1;
+    }
+};
+
+const downvoteDom = (e) => {
+    if (logedIn !== 'true')
+        return window.location.replace(`${window.location.origin}/login`);
+    const downvoteState = e.className.split('-')[1] - 0;
+    const voteNumSpan = e.parentElement.querySelector('span');
+    const votesNumber = voteNumSpan.innerText - 0;
+    const upvoteBtn = e.parentElement.querySelector('button');
+    const upvoteState = upvoteBtn.className.split('-')[1] - 0;
+    const id = e.parentElement.querySelector('input').value;
+    if (!downvoteState) {
+        fetchRequest('/votes/downvote', 'POST', { id });
+        e.className = `downvote-1-button-${mode}`;
+        if (!upvoteState)
+            voteNumSpan.innerText = votesNumber - 1;
+        else {
+            upvoteBtn.className = `upvote-0-button-${mode}`;
+            voteNumSpan.innerText = votesNumber - 2;
+        }
+    } else {
+        fetchRequest('/votes/unvote', 'DELETE', { id });
+        e.className = `downvote-0-button-${mode}`;
+        voteNumSpan.innerText = votesNumber + 1;
+    }
+};
+
+const setActive = (category) => {
+    document.querySelector('.active').classList.remove('active');
+    document.querySelector(`#c-${!category ? 'all' : category}`).classList.add('active');
+};
+
+if (logedIn === 'true') {
+    navLinks[0].innerText = logedUser;
+    navLinks[0].parentElement.href = `/user/profile/${logedUser}`;
+    navLinks[1].innerText = 'logout';
+    navLinks[1].parentElement.href = '/logout';
+} else {
+    createPostBtn.style.display = 'none';
+    createPostResBtn.style.display = 'none';
+}
+
+createPostBtn.onclick = () => {
+    modal.style.display = "block";
+}
+
+createPostResBtn.onclick = () => {
+    modal.style.display = "block";
+};
+
+window.onclick = (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+urlType.onclick = () => {
+    urlType.className = `post-type-active-${mode}`;
+    textType.className = `post-type-inactive-${mode}`;
+    urlTypeInput.style.display = 'block';
+    textTypeInput.style.display = 'none';
+};
+
+textType.onclick = () => {
+    urlType.className = `post-type-inactive-${mode}`;
+    textType.className = `post-type-active-${mode}`;
+    urlTypeInput.style.display = 'none';
+    textTypeInput.style.display = 'block';
+};
+
+const postCreate = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const type = form.querySelector('.post-type-row-light').querySelector(`.post-type-active-${mode}`).innerHTML;
+    const category = form.querySelector('select').value;
+    const title = form.querySelectorAll('input')[2];
+    const content = type === 'text' ? form.querySelector('textarea') : form.querySelectorAll('input')[3];
+    const post = {
+        type: type === 'text' ? type : 'url',
+        category,
+        title: title.value,
+        content: content.value
+    };
+    return fetchRequest('/post/create', 'POST', post)
+        .then(() => modal.style.display = "none")
+        .then(() => {
+            title.value = '';
+            content.value = '';
+        });
+};
+
+const clear = (element) => {
+    while (element.firstChild)
+        element.removeChild(element.firstChild);
 };

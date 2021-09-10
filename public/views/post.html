@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M7M-Reddit</title>
-    <link rel="icon" href="../images/redditIcon.png">
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/post.css">
+    <link rel="icon" href="/images/redditIcon.png">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/post.css">
 </head>
 
 <body>
@@ -23,79 +23,85 @@
                     <path d="M6.03569223,7.86020138e-11 C4.77338857,1.342144 4,3.14939605 4,5.13728269 C4,9.27941831 7.35786438,12.6372827 11.5,12.6372827 C13.4878866,12.6372827 15.2951387,11.8638941 16.6372827,10.6015905 C15.5809549,14.0943073 12.3374493,16.6372827 8.5,16.6372827 C3.80557963,16.6372827 0,12.8317031 0,8.13728269 C0,4.29983338 2.54297542,1.05632781 6.03569223,0 Z" transform="translate(4 4)"></path>
                 </svg>
             </span>
-            <a class="user-light" href="/u/M7Mansour">
-                <span class="username-light">M7Mansour</span>
+            <a class="user-light" href="/login">
+                <span class="username-light nav-links">login</span>
             </a>
-            <a class="logout-container-light" href="/u/M7Mansour">
-                <span class="logout-light">log out</span>
+            <a class="logout-container-light" href="/signup">
+                <span class="logout-light nav-links">sign up</span>
             </a>
         </header>
         <div class="home-wrapper-light">
             <main class="main-light">
                 <nav class="responsive-nav-light">
-                    <div class="responsive-nav-select-wrapper-light"><select class="responsive-nav-select-light"><option value="all">all</option><option value="music">music</option><option value="funny">funny</option><option value="videos">videos</option><option value="programming">programming</option><option value="news">news</option><option value="fashion">fashion</option></select></div>
-                    <a class="responsive-post-button-light" href="/createpost">create post</a>
+                    <div class="responsive-nav-select-wrapper-light">
+                        <select class="responsive-nav-select-light">
+                            <option value="all">all</option>
+                            <option value="music">music</option>
+                            <option value="funny">funny</option>
+                            <option value="videos">videos</option>
+                            <option value="programming">programming</option>
+                            <option value="news">news</option>
+                            <option value="fashion">fashion</option>
+                        </select>
+                    </div>
+                    <button class="responsive-post-button-light" id="create-post-res-btn">create post</button>
                 </nav>
                 <div class="main-post-wrapper-light">
                     <div class="main-post-light">
                         <div class="component-wrapper-light">
-                            <button class="not-vote-button-light"></button>
-                            <span>226</span>
-                            <button class="not-unvote-button-light"></button>
+                            <button class="upvote-0-button-light"></button>
+                            <span></span>
+                            <button class="downvote-0-button-light"></button>
                         </div>
                         <div class="fdnSHg-light">
                             <div class="Xdpjn-light">
-                                <span>FizzleDizzle</span>
+                                <span></span>
                             </div>
                             <div class="iyZCUv-light">
                                 <div class="kOWlQl-light">
-                                    <p>Now lemme tell ya something, young bloodadsfda sfasdfasdfasd fasd fasdfa sfsdfasdfasdfasdfasc fsadafasfasdfasdfasdd fasdfadsfasff.</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="gBkGwr-light">
-                                <a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a>
-                                <a href="/a/programming">/a/programming</a>
+                                <a href="/a/programming/5d0c1a419ba137182ef2721a"></a>
+                                <a href="/a/programming"></a>
                                 <span>by</span>
-                                <a class="cKlNNr-light" href="/u/Beeezle">Beeezle</a>
-                                <span>2Y ago</span>
+                                <a class="cKlNNr-light" href="/u/Beeezle"></a>
+                                <span></span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="ivSYqH-light">
-                    <span>6598 views</span><span>&nbsp;|&nbsp;</span>
-                    <span>80% upvoted</span>
+                    <span></span>
+                    <span>&nbsp;|&nbsp;</span>
+                    <span></span>
+                    <button class="bFFunB-light">delete</button>
                 </div>
                 <div class="hcNwzF-light fKcKMA-light">
                     <form class="dLVDIM-light">
                         <textarea name="comment" placeholder="enter your comment" rows="2" class="cGlmih-light"></textarea>
-                        <button type="submit" class="jlbGIc-light">submit</button>
+                        <button type="submit" class="jlbGIc-light">comment</button>
                     </form>
                 </div>
                 <ul class="gfVMDm-light">
-                    <li class="dVWVjd-light">
-                        <div class="kEqgYk-light">
-                            <div class="ebhVnM-light"><a class="cKlNNr-light" href="/u/M7Mansour">M7Mansour</a><span class="fughqv-light">1d ago</span><button class="bFFunB-light">delete</button></div>
-                            <div class="cymepz-light">
-                                <div class="kOWlQl-light">
-                                    <p>hello</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
             </main>
             <aside class="aside-wrapper-light"><button class="create-post-button-light" id="create-post-btn">create post</button>
-                <nav class="categories-list-light"><span class="categories-title-light">categories</span><a class="categories-item-light active" aria-current="page" href="/">all</a><a class="categories-item-light" href="/a/music">music</a>
-                    <a class="categories-item-light" href="/a/funny">funny</a><a class="categories-item-light" href="/a/videos">videos</a><a class="categories-item-light" href="/a/programming">programming</a>
-                    <a class="categories-item-light" href="/a/news">news</a>
-                    <a class="categories-item-light" href="/a/fashion">fashion</a>
+                <nav class="categories-list-light"><span class="categories-title-light">categories</span>
+                    <a class="categories-item-light active" href="/" id="c-all">all</a>
+                    <a class="categories-item-light" href="/music" id="c-music">music</a>
+                    <a class="categories-item-light" href="/funny" id="c-funny">funny</a>
+                    <a class="categories-item-light" href="/videos" id="c-videos">videos</a>
+                    <a class="categories-item-light" href="/programming" id="c-programming">programming</a>
+                    <a class="categories-item-light" href="/news" id="c-news">news</a>
+                    <a class="categories-item-light" href="/fashion" id="c-fashion">fashion</a>
                 </nav>
             </aside>
         </div>
         <div id="myModal" class="modal">
             <div class="post-form-container-light">
-                <form class="post-form-light">
+                <form class="post-form-light" id="post-form">
                     <div class="post-form-row-light">
                         <div class="post-type-row-light">
                             <input type="radio" name="radiogroup" id="link">
@@ -129,14 +135,15 @@
                         <label class="create-post-label-light">text</label>
                         <textarea name="text" rows="6" placeholder="text" class="create-post-input-light"></textarea>
                     </div>
-                    <button type="submit" class="create-post-form-button-light">create post</button>
+                    <button type="submit" class="create-post-form-button-light" id="create-post-request-btn">create post</button>
                 </form>
             </div>
         </div>
     </div>
     </div>
-    <script src="../javascripts/general.js"></script>
-    <script src="../javascripts/index.js"></script>
+    <script src="/javascripts/logic.js"></script>
+    <script src="/javascripts/general.js"></script>
+    <script src="/javascripts/post.js"></script>
 </body>
 
 </html>
