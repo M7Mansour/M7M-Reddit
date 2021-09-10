@@ -2,10 +2,10 @@ const { ownerID, removePost } = require('../../database/queries');
 const { validatePost } = require('../commentsControllers');
 
 const deletePost = (req, res) => {
-    const { id, OWNER } = req.body;
+    const { id, owner } = req.body;
     const userName = req.body.logedUser;
 
-    if (!validatePost(id) || userName !== OWNER)
+    if (!validatePost(id) || userName !== owner)
         return res.status(403).json({ message: 'forbidden' });
 
     ownerID(userName)
