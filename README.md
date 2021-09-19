@@ -2,7 +2,7 @@
 
 [Demo Link](https://m7m-reddit.herokuapp.com/)
 
-### About this site :heart:
+### About this site
 It's a simple website looks somehow like [reddit](https://www.reddit.com/)
 
 ## User Stories :book:
@@ -18,8 +18,8 @@ As a user:
 
 ## Installing the project locally: :arrow_down:
 ```
-1- clone repo 
-2- cd photography
+1- git clone https://github.com/M7Mansour/M7M-Reddit-1.git 
+2- cd M7M-Reddit-1
 3- npm i 
 4- npm run dev
 ```
