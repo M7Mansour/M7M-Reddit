@@ -1,4 +1,4 @@
-const { createCookies } = require('../../utilities');
+const { createCookies, sendEmail } = require('../../utilities');
 const checkUser = require('./checkUser');
 const createUser = require('./createUser');
 const validateSignup = require('./validation');
@@ -16,7 +16,9 @@ const signup = (req, res) => {
         .then(() => {
             createCookies(res, userName, true, true);
             res.redirect('/');
-        }).catch((err) => {
+        }).then(() => sendEmail({subject: 'M7M-Reddit Sign up', text: 'Congrats you are a member of M7M Reddit now !'},email)
+        .catch(err => console.log(err)))
+        .catch((err) => {
             if (!err.cause)
                 res.status(500).json({ message: 'internal server error' });
             else res.status(403).json({ message: err.message });
